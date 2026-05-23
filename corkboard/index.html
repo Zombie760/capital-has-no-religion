@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0d0d0d">
+<title>Capital Has No Religion — The Bush Dynasty and the Mechanism of Power</title>
+<meta name="description" content="Interactive evidence board for CAPITAL HAS NO RELIGION by Kyle Jimenez. 40+ named persons, 20+ institutions, 30+ filed documents across 931 years. Every pin is a primary source.">
+<meta property="og:title" content="CAPITAL HAS NO RELIGION — The Evidence Board">
+<meta property="og:description" content="Interactive companion to the book by Kyle Jimenez. Drag the board. Pull a thread. Every pin is a primary source.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zombie760.github.io/capital-has-no-religion/corkboard/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CAPITAL HAS NO RELIGION — The Evidence Board">
+<meta name="twitter:description" content="Interactive companion to the book by Kyle Jimenez. Drag the board. Pull a thread.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Lora:ital,wght@0,400;0,600;1,400&family=Kalam:wght@300;400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Architects+Daughter&family=Inter:wght@400;600&family=Oswald:wght@400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+:root {
+  --wall-bg: #0d0d0d;
+  --wall-concrete: #1a1a1a;
+  --wall-brick: #2d2520;
+  --paper-basement: #e8e0d0;
+  --paper-aged: #c4b8a8;
+  --paper-yellow: #d4c4a0;
+  --ink-black: #050505;
+  --ink-blood: #8b0000;
+  --spray-red: #ff2a2a;
+  --spray-silver: #c0c0c0;
+  --neon-green: #39ff14;
+  --chain-orange: #ff6b00;
+  --marker-black: #1a1a1a;
+  --concrete-gray: #4a4a4a;
+  --rust: #8b4513;
+  --graffiti-purple: #800080;
+  --string: #ff0000;
+  --string-hi: #ff4444;
+  --string-doc: #8b0000;
+  --ui-bg: #080808;
+  --ui-text: #d4d0c8;
+  --ui-accent: #ff2a2a;
+  --ui-panel: #121212;
+}
+* { box-sizing: border-box; touch-action: manipulation; }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden;
+  font-family: "Lora", Georgia, serif; background: #0f0a06; color: var(--ui-text); }
+.noselect {
+  -webkit-touch-callout: none; -webkit-user-select: none;
+  -khtml-user-select: none; -moz-user-select: none;
+  -ms-user-select: none; user-select: none;
+}
+#stage {
+  position: fixed; inset: 0;
+  background:
+    repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(128,0,128,0.03) 100px, rgba(128,0,128,0.03) 102px),
+    repeating-linear-gradient(-45deg, transparent, transparent 150px, rgba(255,0,0,0.02) 150px, rgba(255,0,0,0.02) 152px),
+    radial-gradient(ellipse at 30% 20%, rgba(139,69,19,0.15), transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(0,0,0,0.4), transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(40,30,20,0.6), transparent 60%),
+    linear-gradient(180deg, #1a1510 0%, #0f0a06 30%, #0a0805 70%, #12100a 100%);
+  overflow: hidden; cursor: grab; z-index: 1;
+}
+#stage:active { cursor: grabbing; }
+#world { position: absolute; transform-origin: 0 0; will-change: transform; }
+#edges { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+#cards { position: absolute; z-index: 10; }
+.card {
+  position: absolute; width: 280px;
+  background: var(--paper-basement);
+  color: var(--ink-black);
+  font-family: "Lora", Georgia, serif;
+  padding: 0; border-radius: 2px;
+  box-shadow:
+    0 1px 2px rgba(0,0,0,0.15),
+    0 3px 8px rgba(0,0,0,0.12),
+    0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer; z-index: 10;
+}
+.card:hover { transform: translateY(-4px) rotate(0.5deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 12px 32px rgba(0,0,0,0.15); z-index: 20; }
+.card.cdcr-id { width: 260px; background: linear-gradient(135deg, #f5f0e8 0%, #e8e0d0 100%); padding: 0; border: 2px solid #333; }
+.card-header { padding: 16px 16px 8px; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.card-title { font-family: "Oswald", sans-serif; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-black); margin: 0 0 4px; line-height: 1.2; }
+.card-subtitle { font-family: "Courier Prime", monospace; font-size: 10px; color: #666; margin: 0; letter-spacing: 0.05em; }
+.card-body { padding: 12px 16px 16px; font-size: 12px; line-height: 1.6; color: var(--ink-black); }
+.card-footer { padding: 8px 16px 12px; border-top: 1px solid rgba(0,0,0,0.06); font-family: "Courier Prime", monospace; font-size: 9px; color: #666; letter-spacing: 0.03em; }
+.cdcr-header { background: #1a1a1a; color: #fff; padding: 8px 12px; font-family: "Oswald", sans-serif; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; }
+.cdcr-photo { width: 100%; height: 180px; background: linear-gradient(135deg, #d4c4a0 0%, #c4b8a8 100%); display: flex; align-items: center; justify-content: center; font-family: "Special Elite", cursive; font-size: 48px; color: #888; }
+.cdcr-info { padding: 12px; }
+.cdcr-name { font-family: "Oswald", sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-black); margin: 0 0 4px; }
+.cdcr-details { font-family: "Courier Prime", monospace; font-size: 10px; color: #666; line-height: 1.5; }
+.cdcr-stamp { position: absolute; bottom: 8px; right: 8px; font-family: "Special Elite", cursive; font-size: 10px; color: var(--ink-blood); transform: rotate(-12deg); opacity: 0.7; }
+.pin { position: absolute; width: 8px; height: 8px; border-radius: 50%; z-index: 15; pointer-events: none; }
+.pin.red { background: radial-gradient(circle at 30% 30%, #ff4444, #aa0000); box-shadow: 0 0 4px rgba(255,0,0,0.4); }
+.pin.yellow { background: radial-gradient(circle at 30% 30%, #ffaa00, #cc5500); box-shadow: 0 0 4px rgba(255,170,0,0.4); }
+.string { stroke: var(--string); stroke-width: 1.5; fill: none; opacity: 0.6; pointer-events: none; }
+.string.doc { stroke: var(--string-doc); stroke-width: 1; stroke-dasharray: 4 3; opacity: 0.5; }
+#topbar {
+  position: fixed; top: 0; left: 0; right: 0;
+  padding: 12px 20px;
+  display: flex; gap: 16px; align-items: center;
+  z-index: 500;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(15,15,15,0.95) 0%, rgba(15,15,15,0) 100%);
+}
+#topbar > * { pointer-events: auto; }
+#bottombar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  padding: 10px 20px;
+  display: flex; gap: 20px; justify-content: center; align-items: center;
+  z-index: 500;
+  background: linear-gradient(0deg, rgba(15,15,15,0.95) 0%, rgba(15,15,15,0) 100%);
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+#bottombar a { color: #d4cfc4; text-decoration: none; transition: color 0.2s; pointer-events: auto; }
+#bottombar a:hover { color: var(--spray-red); }
+#bottombar .sep { color: #555; pointer-events: none; }
+#title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #d4cfc4;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+#title::before { content: "⚠ "; color: var(--spray-red); }
+.btn {
+  font-family: "Oswald", sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(20,20,20,0.85);
+  border: 1px solid #333;
+  color: #d4cfc4;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.btn:hover { background: rgba(40,30,20,0.9); border-color: var(--spray-red); color: var(--spray-red); }
+#zoom-indicator { font-family: "Courier Prime", monospace; font-size: 11px; color: #888; min-width: 40px; text-align: center; }
+#info-panel {
+  position: fixed; top: 80px; right: 20px; width: 340px;
+  background: rgba(15,15,15,0.95);
+  border: 1px solid #333;
+  padding: 20px;
+  z-index: 600;
+  display: none;
+  max-height: 70vh; overflow-y: auto;
+}
+#info-panel h3 { font-family: "Oswald", sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--spray-red); margin: 0 0 12px; }
+#info-panel p { font-family: "Lora", serif; font-size: 12px; line-height: 1.7; color: #d4cfc4; margin: 0 0 12px; }
+#info-panel .citation { font-family: "Courier Prime", monospace; font-size: 9px; color: #888; border-left: 2px solid var(--spray-red); padding-left: 8px; margin-top: 12px; }
+#tour-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 800; display: none; align-items: center; justify-content: center; flex-direction: column; }
+#tour-overlay.active { display: flex; }
+#tour-content { max-width: 600px; text-align: center; padding: 40px; }
+#tour-content h2 { font-family: "Playfair Display", serif; font-size: 28px; font-style: italic; color: #d4cfc4; margin: 0 0 16px; }
+#tour-content p { font-family: "Lora", serif; font-size: 14px; line-height: 1.8; color: #b8ac90; margin: 0 0 24px; }
+#tour-controls { position: fixed; bottom: 60px; left: 50%; transform: translateX(-50%); z-index: 900; display: none; gap: 12px; }
+#tour-controls.active { display: flex; }
+#intro { position: fixed; inset: 0; background: #0a0a0a; z-index: 1000; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+#intro-content { text-align: center; padding: 40px; }
+#intro-title { font-family: "Playfair Display", serif; font-size: 32px; font-style: italic; color: #d4cfc4; margin: 0 0 16px; min-height: 48px; }
+#intro-subtitle { font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: 3px; color: var(--spray-red); text-transform: uppercase; opacity: 0; transition: opacity 1s; }
+#intro-subtitle.visible { opacity: 1; }
+#intro-author { font-family: "Lora", serif; font-size: 14px; color: #888; margin-top: 8px; opacity: 0; transition: opacity 1s; }
+#intro-author.visible { opacity: 1; }
+@media (max-width: 768px) {
+  #info-panel { width: calc(100% - 40px); right: 20px; top: 60px; }
+  .card { width: 240px; }
+  #title { font-size: 14px; }
+  .btn { padding: 6px 10px; font-size: 9px; }
+}
+</style>
+</head>
+<body class="noselect">
+
+<div id="intro">
+  <div id="intro-content">
+    <p id="intro-title"></p>
+    <p id="intro-subtitle">CAPITAL HAS NO RELIGION — The Bush Dynasty and the Mechanism of Power</p>
+    <p id="intro-author">Kyle Jimenez</p>
+  </div>
+</div>
+
+<div id="stage">
+  <div id="world">
+    <svg id="edges" xmlns="http://www.w3.org/2000/svg"></svg>
+    <div id="cards"></div>
+  </div>
+</div>
+
+<div id="topbar">
+  <div id="title">Capital Has No Religion <small>Evidence Board</small></div>
+  <div style="flex:1"></div>
+  <button class="btn zoom" id="zoom-out">-</button>
+  <div id="zoom-indicator">100%</div>
+  <button class="btn zoom" id="zoom-in">+</button>
+  <button class="btn" id="reset-view">Reset</button>
+  <button class="btn" id="tour-trigger">Tour</button>
+</div>
+
+<div id="info-panel">
+  <h3 id="info-title"></h3>
+  <div id="info-body" style="font-family:'Lora',serif;font-size:12px;line-height:1.7;color:#d4cfc4;margin:0 0 12px;"></div>
+  <div class="citation" id="info-citation"></div>
+</div>
+
+<div id="tour-overlay">
+  <div id="tour-content">
+    <h2 id="tour-title"></h2>
+    <p id="tour-desc"></p>
+    <button class="btn" id="tour-next">Continue &rarr;</button>
+  </div>
+</div>
+<div id="tour-controls">
+  <button class="btn" id="tour-prev">&larr; Prev</button>
+  <button class="btn" id="tour-close">Close</button>
+  <button class="btn" id="tour-next-btn">Next &rarr;</button>
+</div>
+
+<div id="bottombar">
+  <a href="https://gringo1904.substack.com" target="_blank" rel="noopener">Substack</a>
+  <span class="sep">|</span>
+  <a href="https://gringo1904.gumroad.com" target="_blank" rel="noopener">Gumroad</a>
+  <span class="sep">|</span>
+  <a href="https://github.com/Zombie760/capital-has-no-religion" target="_blank" rel="noopener">GitHub</a>
+</div>
+
+<script>
+(function() {
+  "use strict";
+
+  var PINS = [
+    { id:"p001", type:"person", name:"Urban II", years:"1042-1099", role:"Pope. Clermont sermon, Nov 27 1095. Authorized Crusade + plenary indulgence + debt forgiveness.", x:-900, y:50 },
+    { id:"p002", type:"person", name:"Count Emicho of Flonheim", years:"", role:"Led Rhineland massacres, May-July 1096. Worms, Mainz, Cologne, Trier, Speyer.", x:-800, y:150 },
+    { id:"p003", type:"person", name:"Innocent II", years:"", role:"Pope. Issued Omne Datum Optimum, Mar 29 1139. Templar tax exemption + jurisdictional autonomy.", x:-700, y:50 },
+    { id:"p004", type:"person", name:"Prescott Sheldon Bush", years:"1895-1972", role:"Union Banking director. Vesting Order 248, Oct 20 1942. U.S. Senator (R-CT) 1952-1963.", x:-500, y:50 },
+    { id:"p005", type:"person", name:"E. Roland Harriman", years:"", role:"President, Union Banking Corporation. Brown Brothers Harriman.", x:-400, y:150 },
+    { id:"p006", type:"person", name:"Fritz Thyssen", years:"1873-1951", role:"Industrialist. I Paid Hitler (Houghton Mifflin, 1941). Funded Nazi rise 1923-1933.", x:-600, y:250 },
+    { id:"p007", type:"person", name:"Harry S. Truman", years:"1884-1972", role:"33rd U.S. President. Signed Settlement of War Claims Act, July 1 1948. 62 Stat. 1198.", x:-300, y:50 },
+    { id:"p008", type:"person", name:"George Herbert Walker Bush", years:"1924-2018", role:"41st U.S. President. Zapata Petroleum 1953-1966. DCI 1976. VP 1981-1989.", x:-100, y:50 },
+    { id:"p009", type:"person", name:"George Herbert Walker", years:"1875-1953", role:"Maternal grandfather. Founder W.A. Harriman & Co. Father-in-law of Averell Harriman.", x:0, y:150 },
+    { id:"p010", type:"person", name:"Thomas J. Devine", years:"", role:"CIA officer 1953. Zapata business partner of G.H.W. Bush, late 1950s.", x:100, y:50 },
+    { id:"p011", type:"person", name:"George Walker Bush", years:"1946-", role:"43rd U.S. President. Arbusto Energy 1979. Harken Energy. Texas Rangers. Invaded Iraq Mar 20 2003.", x:300, y:50 },
+    { id:"p012", type:"person", name:"James Reynolds Bath", years:"", role:"Texas Air National Guard pilot. Arbusto investor 1979, $50K for 5%. Nominee for Salem bin Laden + Khalid bin Mahfouz.", x:500, y:50 },
+    { id:"p013", type:"person", name:"Salem M. bin Laden", years:"1946-1988", role:"Eldest son of Mohammed bin Laden. Head of Saudi Binladin Group. Died Cibolo TX, May 29 1988.", x:600, y:150 },
+    { id:"p014", type:"person", name:"Khalid bin Mahfouz", years:"1949-2009", role:"Principal, National Commercial Bank. BCCI principal shareholder. Named in Senate Kerry-Brown report.", x:700, y:50 },
+    { id:"p015", type:"person", name:"Osama bin Laden", years:"1957-2011", role:"Founder, al-Qaeda. Family of Mohammed bin Laden. 9/11 attacks.", x:800, y:150 },
+    { id:"p016", type:"person", name:"Sen. John Kerry", years:"1943-", role:"Co-author, Senate BCCI report (Senate Print 102-140, Dec 1992).", x:500, y:250 },
+    { id:"p017", type:"person", name:"Sen. Hank Brown", years:"1940-", role:"Co-author, Senate BCCI report (Senate Print 102-140, Dec 1992).", x:600, y:250 },
+
+    { id:"i001", type:"institution", name:"Union Banking Corporation", desc:"39 Broadway, New York. Seized under Vesting Order 248, Oct 20 1942. Directors included Prescott Bush + E. Roland Harriman.", related:["p004","p005"], x:-500, y:200 },
+    { id:"i002", type:"institution", name:"Brown Brothers Harriman & Co.", desc:"Absorbed W.A. Harriman & Co. 1931. Retained Union Banking client relationship through 1942.", related:["p005"], x:-350, y:200 },
+    { id:"i003", type:"institution", name:"Bank voor Handel en Scheepvaart N.V.", desc:"Rotterdam. Dutch nominee holding Thyssen-family beneficial interest in Union Banking.", related:["p006"], x:-600, y:350 },
+    { id:"i004", type:"institution", name:"Zapata Petroleum / Zapata Off-Shore", desc:"Founded Midland TX 1953. $1M seed capital. G.H.W. Bush ran offshore subsidiary 1954-1966. SEC 10-K 1955-1959.", related:["p008"], x:-100, y:200 },
+    { id:"i005", type:"institution", name:"Arbusto Energy", desc:"G.W. Bush first oil company, 1979. $50K from James Bath for 5% stake.", related:["p011","p012"], x:400, y:200 },
+    { id:"i006", type:"institution", name:"Saudi Binladin Group", desc:"Largest construction conglomerate in Saudi Arabia. Headed by Mohammed bin Laden family.", related:["p013"], x:650, y:350 },
+    { id:"i007", type:"institution", name:"Bank of Credit and Commerce International (BCCI)", desc:"Largest bank fraud in world history per Senate Kerry-Brown report 1992. Secretly owned First American Bankshares.", related:["p014"], x:800, y:250 },
+    { id:"i008", type:"institution", name:"National Commercial Bank (NCB)", desc:"Largest privately held bank in Saudi Arabia. Khalid bin Mahfouz principal.", related:["p014"], x:750, y:350 },
+    { id:"i009", type:"institution", name:"Carlyle Group", desc:"Defense-oriented private equity. Board included G.H.W. Bush + James Baker post-presidency.", related:["p008"], x:200, y:350 },
+    { id:"i010", type:"institution", name:"NARA Record Group 131", desc:"Records of the Office of Alien Property Custodian. Holds Vesting Order 248 case file.", related:["p004"], x:-450, y:350 },
+
+    { id:"e001", type:"event", name:"Clermont Sermon", date:"Nov 27, 1095", desc:"Urban II calls for Crusade. Plenary indulgence + debt forgiveness for crucesignatus. Fulcher of Chartres, Robert the Monk, Baldric of Dol, Guibert of Nogent record.", source:"Fulcher Historia; Robert Historia; Munro AHR 1906; Brundage 1969", x:-900, y:250 },
+    { id:"e002", type:"event", name:"Rhineland Massacres", date:"May-July 1096", desc:"Worms, Mainz, Cologne, Trier, Speyer. Roughly 1/3 of Rhine valley Jewish population destroyed. Seizure of mercantile/lending capital.", source:"Solomon bar Simson Chronicle; Eliezer bar Nathan Chronicle; Eidelberg 1977", x:-800, y:350 },
+    { id:"e003", type:"event", name:"Omne Datum Optimum", date:"Mar 29, 1139", desc:"Papal bull granting Templars tax exemption, jurisdictional autonomy, right to retain spoils. Hiestand no. 3; Migne PL 179:466-468.", source:"Vatican Apostolic Archive; Hiestand 1972", x:-700, y:250 },
+    { id:"e004", type:"event", name:"Vesting Order 248", date:"Oct 20, 1942", desc:"Union Banking Corporation seized. 7 Fed. Reg. 9097. Thyssen family = enemy nationals. Prescott Bush director. No prosecution.", source:"Federal Register; NARA RG 131 case file 248", x:-500, y:400 },
+    { id:"e005", type:"event", name:"Vesting Order 261", date:"Oct 28, 1942", desc:"Holland-American Trading Corporation seized. 7 Fed. Reg. NARA RG 131.", source:"Federal Register; NARA RG 131", x:-350, y:400 },
+    { id:"e006", type:"event", name:"Vesting Order 370", date:"Mar 23, 1943", desc:"Silesian-American Corporation seized. 8 Fed. Reg. NARA RG 131.", source:"Federal Register; NARA RG 131", x:-200, y:400 },
+    { id:"e007", type:"event", name:"Settlement of War Claims Act", date:"July 1, 1948", desc:"62 Stat. 1198. Harry Truman signs. Authorizes return of vested assets to reorganized entities. Bush receives ~$1.5M 1951.", source:"62 Stat. 1198; Public Law 80-648", x:-300, y:250 },
+    { id:"e008", type:"event", name:"Bush Elected to Senate", date:"Nov 4, 1952", desc:"Prescott Bush elected U.S. Senator from Connecticut. Takes seat Jan 3, 1953. Serves until Jan 3, 1963.", source:"Congressional Biographical Directory", x:-300, y:150 },
+    { id:"e009", type:"event", name:"Zapata Founded", date:"1953", desc:"$1M seed capital from Prescott Bush + George Herbert Walker. Midland, Texas. SEC Form 10 registration 1954.", source:"SEC Form 10, 1954; SEC 10-K 1955-1959", x:0, y:250 },
+    { id:"e010", type:"event", name:"Operation Zapata / Bay of Pigs", date:"Apr 17, 1961", desc:"CIA Cuban operation used Zapata name. Two landing vessels: Houston + Barbara. G.H.W. Bush in Zapata Off-Shore.", source:"CIA IG Survey of Cuban Operation, Oct 1961 (declass. 1998)", x:100, y:350 },
+    { id:"e011", type:"event", name:"Kennedy Assassination FBI Memo", date:"Nov 22, 1963", desc:"G.H.W. Bush files FBI memo from Tyler, TX. Signed SAC Graham W. Kitchel.", source:"FBI FOIA file 124-10184-10052", x:-50, y:350 },
+    { id:"e012", type:"event", name:"Arbusto Investment", date:"1979", desc:"James Bath invests $50K for 5% of Arbusto Energy. Bath = nominee for Salem bin Laden + Khalid bin Mahfouz per tax court.", source:"Bath v. Commissioner, T.C. Memo 1992-635; Texas Observer Nov 6 1991", x:500, y:350 },
+    { id:"e013", type:"event", name:"Senate BCCI Report", date:"Dec 1992", desc:"Kerry-Brown report. 'Largest bank fraud in world history.' Names Khalid bin Mahfouz + James Bath + Skyway Aircraft.", source:"U.S. Senate, Senate Print 102-140, 102d Cong. 2d Sess.", x:650, y:450 },
+    { id:"e014", type:"event", name:"9/11 Attacks", date:"Sep 11, 2001", desc:"15 of 19 hijackers from Saudi Arabia. Bin Laden family evacuated by private charter flights post-airspace reopening.", source:"9/11 Commission Report, pp. 329-331; GPO 2004", x:850, y:350 },
+    { id:"e015", type:"event", name:"Invasion of Iraq", date:"Mar 20, 2003", desc:"Public Law 107-243. AUMF Against Iraq. Signed by President G.W. Bush Oct 16, 2002. Zero hijackers from Iraq.", source:"Public Law 107-243, 116 Stat. 1498", x:350, y:350 },
+    { id:"e016", type:"event", name:"Industrielleneingabe", date:"Nov 19, 1932", desc:"20 industrialists petition Hindenburg urging Hitler appointment. Bundesarchiv Berlin R 43 II / 26.", source:"Bundesarchiv Berlin; NARA RG 238 I.G. Farben case files", x:-150, y:450 }
+  ];
+
+  var EDGES = [
+    { source:"p001", target:"e001", kind:"preached" },
+    { source:"p002", target:"e002", kind:"led" },
+    { source:"p003", target:"e003", kind:"issued" },
+    { source:"p004", target:"i001", kind:"director" },
+    { source:"p004", target:"e004", kind:"seized" },
+    { source:"p004", target:"e008", kind:"elected" },
+    { source:"p005", target:"i001", kind:"president" },
+    { source:"p005", target:"i002", kind:"partner" },
+    { source:"p006", target:"i003", kind:"beneficial_owner" },
+    { source:"p006", target:"e004", kind:"named" },
+    { source:"p007", target:"e007", kind:"signed" },
+    { source:"p008", target:"i004", kind:"founder_operator" },
+    { source:"p008", target:"e009", kind:"founded" },
+    { source:"p008", target:"e010", kind:"cia_cover" },
+    { source:"p008", target:"e011", kind:"filed_memo" },
+    { source:"p009", target:"i002", kind:"founder" },
+    { source:"p009", target:"e009", kind:"seed_capital" },
+    { source:"p010", target:"i004", kind:"partner" },
+    { source:"p011", target:"i005", kind:"founder" },
+    { source:"p011", target:"e015", kind:"authorized" },
+    { source:"p012", target:"i005", kind:"investor" },
+    { source:"p012", target:"e012", kind:"investment" },
+    { source:"p013", target:"i006", kind:"head" },
+    { source:"p013", target:"p015", kind:"brother" },
+    { source:"p014", target:"i008", kind:"principal" },
+    { source:"p014", target:"i007", kind:"shareholder" },
+    { source:"p015", target:"e014", kind:"perpetrated" },
+    { source:"p016", target:"e013", kind:"authored" },
+    { source:"p017", target:"e013", kind:"authored" },
+    { source:"i001", target:"e004", kind:"seized" },
+    { source:"i002", target:"e004", kind:"client" },
+    { source:"i003", target:"e004", kind:"nominee" },
+    { source:"i005", target:"e012", kind:"investment_target" },
+    { source:"i007", target:"e013", kind:"reported" },
+    { source:"i008", target:"e013", kind:"named" },
+    { source:"e004", target:"e007", kind:"returned" },
+    { source:"e009", target:"e010", kind:"cia_cover" },
+    { source:"e012", target:"e013", kind:"tax_court" },
+    { source:"e014", target:"e015", kind:"preceded" }
+  ];
+
+  var TOUR_BEATS = [
+    { id:1, title:"Clermont, 1095", caption:"November 27, 1095. Urban II calls for the First Crusade. Plenary indulgence + debt forgiveness for crucesignatus. Fulcher of Chartres, Robert the Monk, Baldric of Dol, Guibert of Nogent record. The first violence: Rhineland massacres, May-July 1096. One-third of the Jewish population of the Rhine valley destroyed. The capital was seized. The mechanism was born.", camera:{x:-850,y:200,k:0.75}, highlight:["p001","p002","e001","e002"]},
+    { id:2, title:"Omne Datum Optimum, 1139", caption:"March 29, 1139. Pope Innocent II issues the bull granting the Templars tax exemption and jurisdictional autonomy. The precedent is nine centuries old. The Vatican Apostolic Archive holds the receipt.", camera:{x:-700,y:200,k:0.85}, highlight:["p003","e003"]},
+    { id:3, title:"Vesting Order 248", caption:"October 20, 1942. 7 Fed. Reg. 9097. Union Banking Corporation, 39 Broadway, seized as enemy-owned. Prescott Bush is one of seven directors. Fritz Thyssen's I Paid Hitler (Houghton Mifflin, 1941) named the beneficial owners a year earlier. No prosecution. The mechanism does not require crime.", camera:{x:-450,y:250,k:0.75}, highlight:["p004","p005","p006","i001","e004"]},
+    { id:4, title:"The Return + The Senate Seat", caption:"July 1, 1948. Settlement of War Claims Act, 62 Stat. 1198. Harry Truman signs. Prescott Bush receives ~$1.5M when Union Banking liquidates in 1951. November 4, 1952: Bush elected to the U.S. Senate from Connecticut. The money came first. The office came second.", camera:{x:-300,y:150,k:0.8}, highlight:["p007","e007","e008"]},
+    { id:5, title:"Zapata Petroleum", caption:"1953. Midland, Texas. $1M seed capital from Prescott Bush + George Herbert Walker. Zapata Off-Shore runs 1954-1966. The SEC 10-Ks for 1960-1966 are missing. 'Destroyed in routine processing' during the early 1980s — when G.H.W. Bush was Vice President.", camera:{x:-50,y:200,k:0.8}, highlight:["p008","p009","p010","i004","e009","e010","e011"]},
+    { id:6, title:"Bath and the Saudis", caption:"1979. James Bath invests $50K in Arbusto Energy for 5%. Bath is court-documented nominee for Salem bin Laden + Khalid bin Mahfouz. The capital that funded George W. Bush's first oil company came from the bin Laden family and the principal shareholder of BCCI — the bank the U.S. Senate called 'the largest bank fraud in world history.'", camera:{x:550,y:200,k:0.75}, highlight:["p012","p013","p014","i005","i006","i007","e012"]},
+    { id:7, title:"The Senate BCCI Report", caption:"December 1992. Kerry-Brown report, Senate Print 102-140. Names Khalid bin Mahfouz repeatedly. Documents BCCI's secret ownership of First American Bankshares, narcotics laundering, Iran-Contra arms clearing. The trail is not inference. It is named entities in named filings.", camera:{x:650,y:350,k:0.8}, highlight:["p016","p017","e013"]},
+    { id:8, title:"9/11 and Iraq", caption:"September 11, 2001. 15 of 19 hijackers from Saudi Arabia. Zero from Iraq. The bin Laden family evacuated by private charter. March 20, 2003: the United States invades Iraq under Public Law 107-243. The mechanism does not require explanation. The mechanism requires the documents.", camera:{x:600,y:300,k:0.7}, highlight:["p011","p015","e014","e015"]},
+    { id:9, title:"The 931-Year Pattern", caption:"From Clermont 1095 to Baghdad 2003. The same mechanism: capital concentrates, sovereign violence seizes, legal exemption follows, asset transfer completes the cycle. Capital has no religion. Capital has no nation. Capital has only the return.", camera:{x:0,y:0,k:0.55}, highlight:["p001","p003","p004","p008","p011","e001","e003","e004","e007","e015"]}
+  ];
+
+  var stage = document.getElementById("stage");
+  var world = document.getElementById("world");
+  var edgesSvg = document.getElementById("edges");
+  var cardsDiv = document.getElementById("cards");
+  var state = { x:0, y:0, k:1, dragging:false, lastX:0, lastY:0 };
+
+  function makeEl(tag, cls, txt) {
+    var el = document.createElement(tag);
+    if (cls) el.className = cls;
+    if (txt) el.textContent = txt;
+    return el;
+  }
+
+  function clearChildren(el) {
+    while (el.firstChild) { el.removeChild(el.firstChild); }
+  }
+
+  function renderCard(pin) {
+    var el = document.createElement("div");
+    el.className = "card";
+    el.id = "card-" + pin.id;
+    el.style.left = pin.x + "px";
+    el.style.top = pin.y + "px";
+    el.dataset.id = pin.id;
+
+    if (pin.type === "person") {
+      el.classList.add("cdcr-id");
+      el.appendChild(makeEl("div", "cdcr-header", "PERSON OF RECORD"));
+      var photo = makeEl("div", "cdcr-photo", "?");
+      el.appendChild(photo);
+      var info = makeEl("div", "cdcr-info");
+      info.appendChild(makeEl("div", "cdcr-name", pin.name));
+      var det = makeEl("div", "cdcr-details");
+      det.appendChild(document.createTextNode((pin.years || "") + "\n"));
+      det.appendChild(document.createElement("br"));
+      det.appendChild(document.createTextNode(pin.role));
+      info.appendChild(det);
+      el.appendChild(info);
+      el.appendChild(makeEl("div", "cdcr-stamp", "CITATION FILED"));
+    } else if (pin.type === "institution") {
+      var hdr = makeEl("div", "card-header");
+      hdr.appendChild(makeEl("div", "card-title", pin.name));
+      el.appendChild(hdr);
+      el.appendChild(makeEl("div", "card-body", pin.desc));
+      var foot = makeEl("div", "card-footer");
+      foot.textContent = "Related: " + (pin.related || []).join(", ");
+      el.appendChild(foot);
+    } else if (pin.type === "event") {
+      var hdr2 = makeEl("div", "card-header");
+      hdr2.appendChild(makeEl("div", "card-title", pin.name));
+      hdr2.appendChild(makeEl("div", "card-subtitle", pin.date));
+      el.appendChild(hdr2);
+      el.appendChild(makeEl("div", "card-body", pin.desc));
+      var foot2 = makeEl("div", "card-footer");
+      foot2.textContent = "Source: " + pin.source;
+      el.appendChild(foot2);
+    }
+
+    el.addEventListener("click", function() { showInfo(pin); });
+    return el;
+  }
+
+  function renderPin(pin) {
+    var p = document.createElement("div");
+    p.className = "pin " + (pin.type === "event" ? "yellow" : "red");
+    p.style.left = (pin.x + 140) + "px";
+    p.style.top = (pin.y - 6) + "px";
+    return p;
+  }
+
+  PINS.forEach(function(pin) {
+    cardsDiv.appendChild(renderCard(pin));
+    cardsDiv.appendChild(renderPin(pin));
+  });
+
+  function renderEdges() {
+    clearChildren(edgesSvg);
+    EDGES.forEach(function(edge) {
+      var s = PINS.find(function(p){ return p.id === edge.source; });
+      var t = PINS.find(function(p){ return p.id === edge.target; });
+      if (!s || !t) return;
+      var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", s.x + 140);
+      line.setAttribute("y1", s.y + 80);
+      line.setAttribute("x2", t.x + 140);
+      line.setAttribute("y2", t.y + 80);
+      line.setAttribute("class", "string " + (edge.document ? "doc" : ""));
+      edgesSvg.appendChild(line);
+    });
+  }
+  renderEdges();
+
+  function updateTransform() {
+    world.style.transform = "translate(" + state.x + "px," + state.y + "px) scale(" + state.k + ")";
+    document.getElementById("zoom-indicator").textContent = Math.round(state.k * 100) + "%";
+  }
+  updateTransform();
+
+  stage.addEventListener("mousedown", function(e) {
+    if (e.target.closest(".card") || e.target.closest(".btn")) return;
+    state.dragging = true; state.lastX = e.clientX; state.lastY = e.clientY;
+  });
+  window.addEventListener("mousemove", function(e) {
+    if (!state.dragging) return;
+    state.x += e.clientX - state.lastX;
+    state.y += e.clientY - state.lastY;
+    state.lastX = e.clientX; state.lastY = e.clientY;
+    updateTransform();
+  });
+  window.addEventListener("mouseup", function() { state.dragging = false; });
+
+  stage.addEventListener("wheel", function(e) {
+    e.preventDefault();
+    var zoomSpeed = 0.001;
+    var newK = state.k * (1 - e.deltaY * zoomSpeed);
+    newK = Math.max(0.3, Math.min(3, newK));
+    var rect = stage.getBoundingClientRect();
+    var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    state.x = mx - (mx - state.x) * (newK / state.k);
+    state.y = my - (my - state.y) * (newK / state.k);
+    state.k = newK;
+    updateTransform();
+  }, { passive: false });
+
+  document.getElementById("zoom-in").addEventListener("click", function() {
+    state.k = Math.min(3, state.k * 1.2); updateTransform();
+  });
+  document.getElementById("zoom-out").addEventListener("click", function() {
+    state.k = Math.max(0.3, state.k / 1.2); updateTransform();
+  });
+  document.getElementById("reset-view").addEventListener("click", function() {
+    state.x = 0; state.y = 0; state.k = 1; updateTransform();
+  });
+
+  var infoPanel = document.getElementById("info-panel");
+  function showInfo(pin) {
+    document.getElementById("info-title").textContent = pin.name;
+    var body = document.getElementById("info-body");
+    clearChildren(body);
+    if (pin.type === "person") {
+      if (pin.years) body.appendChild(document.createTextNode("Years: " + pin.years + "\n\n"));
+      body.appendChild(document.createTextNode("Role: " + pin.role));
+    } else if (pin.type === "institution") {
+      body.appendChild(document.createTextNode(pin.desc));
+    } else if (pin.type === "event") {
+      body.appendChild(document.createTextNode("Date: " + pin.date + "\n\n" + pin.desc));
+    }
+    document.getElementById("info-citation").textContent = (pin.source || "");
+    infoPanel.style.display = "block";
+  }
+
+  stage.addEventListener("click", function(e) {
+    if (!e.target.closest(".card")) infoPanel.style.display = "none";
+  });
+
+  var tourState = { active:false, currentBeat:0 };
+  var tourOverlay = document.getElementById("tour-overlay");
+  var tourControls = document.getElementById("tour-controls");
+
+  function showBeat(idx) {
+    var beat = TOUR_BEATS[idx];
+    if (!beat) return;
+    document.getElementById("tour-title").textContent = beat.title;
+    document.getElementById("tour-desc").textContent = beat.caption;
+    var start = { x: state.x, y: state.y, k: state.k };
+    var end = { x: -beat.camera.x * beat.camera.k + stage.clientWidth/2 - 140*beat.camera.k,
+                y: -beat.camera.y * beat.camera.k + stage.clientHeight/2 - 80*beat.camera.k,
+                k: beat.camera.k };
+    var startTime = performance.now();
+    function step(now) {
+      var t = Math.min(1, (now - startTime) / 800);
+      var ease = t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2,2)/2;
+      state.x = start.x + (end.x - start.x) * ease;
+      state.y = start.y + (end.y - start.y) * ease;
+      state.k = start.k + (end.k - start.k) * ease;
+      updateTransform();
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+    document.querySelectorAll(".card").forEach(function(c) { c.style.boxShadow = ""; });
+    (beat.highlight || []).forEach(function(id) {
+      var c = document.getElementById("card-" + id);
+      if (c) c.style.boxShadow = "0 0 0 3px var(--spray-red), 0 4px 16px rgba(255,0,0,0.3)";
+    });
+  }
+
+  function startTour() {
+    tourState.active = true; tourState.currentBeat = 0;
+    tourOverlay.classList.add("active");
+    tourControls.classList.add("active");
+    showBeat(0);
+  }
+  function nextBeat() {
+    if (tourState.currentBeat < TOUR_BEATS.length - 1) {
+      tourState.currentBeat++; showBeat(tourState.currentBeat);
+    } else { endTour(); }
+  }
+  function prevBeat() {
+    if (tourState.currentBeat > 0) { tourState.currentBeat--; showBeat(tourState.currentBeat); }
+  }
+  function endTour() {
+    tourState.active = false;
+    tourOverlay.classList.remove("active");
+    tourControls.classList.remove("active");
+    document.querySelectorAll(".card").forEach(function(c) { c.style.boxShadow = ""; });
+  }
+
+  document.getElementById("tour-trigger").addEventListener("click", startTour);
+  document.getElementById("tour-next").addEventListener("click", nextBeat);
+  document.getElementById("tour-next-btn").addEventListener("click", nextBeat);
+  document.getElementById("tour-prev").addEventListener("click", prevBeat);
+  document.getElementById("tour-close").addEventListener("click", endTour);
+
+  var titleEl = document.getElementById("intro-title");
+  var subtitleEl = document.getElementById("intro-subtitle");
+  var authorEl = document.getElementById("intro-author");
+  var intro = document.getElementById("intro");
+  var TITLE_TEXT = "CAPITAL HAS NO RELIGION";
+
+  function typewriter(el, text, speed, cb) {
+    var i = 0;
+    function tick() {
+      if (i < text.length) { el.textContent += text.charAt(i); i++; setTimeout(tick, speed); }
+      else if (cb) cb();
+    }
+    tick();
+  }
+
+  setTimeout(function() { typewriter(titleEl, TITLE_TEXT, 60, function() {
+    setTimeout(function() { subtitleEl.classList.add("visible"); }, 400);
+    setTimeout(function() { authorEl.classList.add("visible"); }, 800);
+    setTimeout(function() { intro.style.opacity = "0"; intro.style.transition = "opacity 1s"; }, 3000);
+    setTimeout(function() { intro.style.display = "none"; }, 4000);
+  });}, 600);
+
+})();
+</script>
+</body>
+</html>
