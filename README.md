@@ -10,7 +10,7 @@
 
 ## Enter the Evidence Board
 
-**[Click here to open the interactive Corkboard →](https://zombie760.github.io/capital-has-no-religion/corkboard/)**
+**[Click here to open the interactive Corkboard →](https://zombie760.github.io/capital-has-no-religion)**
 
 17 named persons. 10 institutions. 16 filed documents. 931 years of evidence. Drag the board. Pull a thread. Click any pin to see the primary-source citation, archive location, and manuscript chapter cross-reference. Every pin is a filed document.
 
@@ -47,7 +47,7 @@ This book operates on a **prove-it-first** model. The full text and every citati
 
 ## Companion Materials
 
-- **Interactive Evidence Board:** [zombie760.github.io/capital-has-no-religion/corkboard/](https://zombie760.github.io/capital-has-no-religion/corkboard/)
+- **Interactive Evidence Board:** [zombie760.github.io/capital-has-no-religion](https://zombie760.github.io/capital-has-no-religion)
 - **News Aggregator:** [BOTWAVEBOMBA](https://botwave.app/botwavebomba/)
 
 ## Method
