@@ -50,10 +50,6 @@ This book operates on a **prove-it-first** model. The full text and every citati
 - **Interactive Evidence Board:** [zombie760.github.io/capital-has-no-religion](https://zombie760.github.io/capital-has-no-religion)
 - **News Aggregator:** [BOTWAVEBOMBA](https://botwave.app/botwavebomba/)
 
-## Method
-
-Built on the TELOS+PAI substrate. Every chapter passes the Prime Directive gate: a named, filed, publicly-verifiable primary source for every factual claim.
-
 ---
 
 *Every claim filed. Every source named.*
